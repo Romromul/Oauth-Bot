@@ -1,4 +1,4 @@
-# Felosi SelfBot
+# Felosi Oauth Bot
 Make a Discord Oauth Bot Using Restorecord!
 
 ⚠️ For educational purposes only.⚠️
