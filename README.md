@@ -21,10 +21,8 @@ Create an account on [Restorecord](https://restorecord.com/) and add a bot and a
 Complete this to start the oauth bot and dont forget to put your token in the secret environnement
 
 
-`module.exports = {`
-  `token: process.env.token,`
   `port: "3000",`
-  `prefix: "YOUR-PRefix",`
+  `prefix: "YOUR-PREFIX",`
   `client: "THE_BOT_NAME",`
   `client_id: "THE_BOT_ID",`
   `client_secret: "THE_BOT_CLIENT_SECRET",`
@@ -34,7 +32,7 @@ Complete this to start the oauth bot and dont forget to put your token in the se
   `owners: "OWNER_ID",`
   `authLink: "YOUR_RESTORECORD_AUTH_LINK",`
 
-`}`
+
 
 { "by Felosi" }`
 
