@@ -12,11 +12,11 @@ Official: https://replit.com/@FelosiDev/New-Oauth
 A Code written in Node.js to create a Oauth bot.
 
 1. Create a bot on [Dev Discord](https://discord.com/developers/applications)
-2. Put your token bot in `secrets`
-3. The [index.js](https://replit.com/@FelosiDev/New-Oauth#index.js) is the main file. [server.js](https://replit.com/@FelosiDev/New-Oauth#server.js) prevents your repl from going to sleep. 
-4. Create an account on [Restorecord](https://restorecord.com/) and add a bot and a server for the auth link.
-5. Put the restorecord redirect url on your bot redirects in Oauth2.
-6. In the code put the server verification link where it need to be.
+2. The [index.js](https://replit.com/@FelosiDev/New-Oauth#index.js) is the main file. [server.js](https://replit.com/@FelosiDev/New-Oauth#server.js) prevents your repl from going to sleep.
+3. Put your bot token in `secrets`
+5. Create an account on [Restorecord](https://restorecord.com/) and add a bot and a server for the auth link.
+6. Put the restorecord redirect url on your bot redirects in Oauth2.
+7. In the code put the server verification link where it need to be.
 6. Use [uptimerobot.com](https://uptimerobot.com) to make your repl online 24/7.
 
 ----
@@ -28,6 +28,5 @@ A Code written in Node.js to create a Oauth bot.
 </br>
 
 > ⭐ Feel free to leave a ❤️ if this helped you! ;)
-
 > Felosi OauthBot © 2023 by Felosi.
 
