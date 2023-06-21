@@ -9,9 +9,9 @@ Official: https://replit.com/@FelosiDev/New-Oauth
 
 ![](https://cdn.discordapp.com/attachments/1117800455909691515/1119105039491932171/standard.gif)
 
-A Code written in Node.js to create a oauth bot.
+A Code written in Node.js to create a Oauth bot.
 
-1. Creat a bot on [Dev Discord](https://discord.com/developers/applications)
+1. Create a bot on [Dev Discord](https://discord.com/developers/applications)
 2. Put your token bot in `secrets`
 3. The [index.js](https://replit.com/@FelosiDev/New-Oauth#index.js) is the main file. [server.js](https://replit.com/@FelosiDev/New-Oauth#server.js) prevents your repl from going to sleep. 
 4. Create an account on [Restorecord](https://restorecord.com/) and add a bot and a server for the auth link.
@@ -25,12 +25,9 @@ A Code written in Node.js to create a oauth bot.
 
 🔰 **I'm not responsible for what you do with the bot or if your account/server is banned from Discord**
 
-
 </br>
 
 > ⭐ Feel free to leave a ❤️ if this helped you! ;)
-
-----
 
 > Felosi OauthBot © 2023 by Felosi.
 
