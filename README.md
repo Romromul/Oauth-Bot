@@ -1,6 +1,8 @@
 # Felosi Oauth Bot
 Make a Discord Oauth Bot Using Restorecord!
+
 Official: https://replit.com/@FelosiDev/New-Oauth
+
 ⚠️ For educational purposes only.
 
 ----
