@@ -7,7 +7,7 @@ Official: https://replit.com/@FelosiDev/New-Oauth
 
 ----
 
-![](https://cdn.discordapp.com/attachments/1117800455909691515/1119105039491932171/standard.gif)
+![](https://share.creavite.co/8O14D9FnEmBuxwlR.gif)
 
 A Code written in Node.js to create a Oauth bot.
 
