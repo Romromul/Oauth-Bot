@@ -1,15 +1,15 @@
 # Felosi Oauth Bot
 Make a Discord Oauth Bot Using Restorecord!
 
-Official: https://replit.com/@FelosiDev/New-Oauth
+Replit: https://replit.com/@FelosiDev/New-Oauth
 
 ⚠️ For educational purposes only.
 
 ----
 
-![](https://share.creavite.co/8O14D9FnEmBuxwlR.gif)
+![](https://share.creavite.co/tQYKbJkAxZSyghl1.gif)
 
-A Code written in Node.js to create a Oauth bot.
+A Code written in Node.js to create a Oauth Bot.
 
 1. Create a bot on [Dev Discord](https://discord.com/developers/applications)
 2. The [index.js](https://replit.com/@FelosiDev/New-Oauth#index.js) is the main file. [server.js](https://replit.com/@FelosiDev/New-Oauth#server.js) prevents your repl from going to sleep.
