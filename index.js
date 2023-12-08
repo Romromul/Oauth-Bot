@@ -307,3 +307,5 @@ client.on('message', async (message) => {
 
 keepAlive();
 client.login(process.env.TOKEN);
+
+//Made by Felosi @2023
