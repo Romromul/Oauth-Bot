@@ -14,7 +14,6 @@ client.prefix = "+"
 
 
 
-
     const activities = [
       "...",
       "+help | v3",
