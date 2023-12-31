@@ -27,5 +27,5 @@ A Code written in Node.js to create a Oauth Bot.
 
 </br>
 
-> ⭐ Feel free to leave a ❤️ if this helped you! | Felosi OauthBot © 2023 by Felosi.
+> ⭐ Feel free to leave a ❤️ if this helped you! | Felosi Selfbot © 2023 by Felosi.
 
