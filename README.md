@@ -26,4 +26,4 @@ A Code written in Node.js to create a Oauth Bot.
 
 ![](https://img.hotimg.com/Capture-decran-le-2024-02-26-a-20.36.40.png)
 ##
-> ⭐ Feel free to leave a ❤️ if this helped you! | Felosi Selfbot © 2023 by Felosi.
+> ⭐ Feel free to leave a ❤️ if this helped you! | Felosi Oauth Bot © 2023 by Felosi.
